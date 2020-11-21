@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-clr: #6a89cc;
+  --bg2-clr: #0abde3;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+nav {
+  height: 4em;
+  background: var(--bg2-clr);
+}
+nav img {
+  margin: 15px 0;
+}
+
+/*================
+main & container
+====================*/
+main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(150%);
+}
+.container {
+  margin-top: 5px;
+  padding: 50px;
+  height: 640px;
+  display: grid;
+  grid-template-columns: 300px auto 600px;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid red;
+}
+.tagline {
+  /* margin-left: 50px; */
+  grid-column: 1;
+}
+.form-wrapper {
+  border: 1px solid red;
+  grid-column: 4;
+}
+.tagline h1 {
+  font-size: 5rem;
+  color: #e4d8d6;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-wrapper .form {
+  color: whitesmoke;
+  width: 400px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+.form-wrapper .form input {
+  width: 200px;
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 3px #ffffff;
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  filter: none;
+}
+.form-wrapper .form input:focus {
+  animation: slide 1s ease 0s 1;
+}
+@keyframes slide {
+  50% {
+    width: 50%;
+    border-bottom: 3px solid var(--primary);
+  }
+  100% {
+    width: 100%;
+    border-bottom: 3px solid var(--success);
+  }
+}
