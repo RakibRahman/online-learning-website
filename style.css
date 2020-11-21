@@ -32,7 +32,7 @@
 }
 nav {
   height: 4em;
-  background: var(--bg2-clr);
+  background: var(--light);
 }
 nav img {
   margin: 15px 0;
@@ -58,14 +58,12 @@ main {
   grid-template-rows: 1fr;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid red;
 }
 .tagline {
   /* margin-left: 50px; */
   grid-column: 1;
 }
 .form-wrapper {
-  border: 1px solid red;
   grid-column: 4;
 }
 .tagline h1 {
@@ -103,10 +101,47 @@ main {
 @keyframes slide {
   50% {
     width: 50%;
-    border-bottom: 3px solid var(--primary);
+    border-bottom: 3px solid var(--green);
   }
   100% {
     width: 100%;
-    border-bottom: 3px solid var(--success);
+    border-bottom: 3px solid var(--cyan);
   }
+}
+::placeholder {
+  color: var(--light);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.form a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--orange);
+  font-weight: 500;
+}
+.form button {
+  padding: 2px 15px;
+  border-radius: 15px;
+  background: transparent;
+  border-color: var(--danger);
+  transition: 250ms;
+}
+.form .forget {
+  font-size: 22px;
+}
+.form l-help {
+  margin-bottom: 10px;
+}
+.form img {
+  cursor: pointer;
+  transition: 250ms;
+}
+.form img:hover {
+  opacity: 55%;
+}
+.form > * {
+  margin: 10px 0;
+}
+.form .effect-btn:hover {
+  transform: scale(1.03) translateY(-3px);
 }
