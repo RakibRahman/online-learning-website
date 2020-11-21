@@ -33,7 +33,7 @@ nav {
   background: var(--light);
 }
 nav img {
-  margin: 15px 0;
+  margin: 15px 0 15px 50px;
 }
 
 /*================
@@ -223,4 +223,37 @@ footer .f-title2 {
   text-align: center;
 }
 
-/*  */
+/* Responsiveness */
+@media only screen and (max-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container .tagline h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container .tagline {
+    display: none;
+  }
+  .form-wrapper {
+    margin-right: 20px;
+  }
+  .form-wrapper .f-btn {
+    background: var(--blue);
+    border: var(--light);
+  }
+  .form .f-btn a {
+    color: var(--light);
+  }
+  .form p a {
+    color: var(--light);
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 2px 5px var(--green);
+  }
+}
